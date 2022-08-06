@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Deploy 
 
 # Controls when the workflow will run
 on:
@@ -31,5 +31,5 @@ jobs:
       - name: Install Surge
         run: npm install -g surge
       - name: Run Surge
-        run: surge ./ bootcampnewapp.surge.sh --token ${{secret.PROJECT001_SURGE_TOKEN_FIRASAT}}
+        run: surge ./ bootcampnewapp.surge.sh --token ${{secrets.PROJECT001_SURGE_TOKEN_FIRASAT}}
         
